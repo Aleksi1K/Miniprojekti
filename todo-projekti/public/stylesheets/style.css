@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  /* Reset browser default values */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  background: #fdfdfd;
+
+}
+
+h2 {
+  color: black;
+  font-weight: 100;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+/* Add task box-styling */
+#add-task {
+  margin-top: 1rem;
+  box-shadow: 4px 4px 15px 1.5px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  padding: 1.5rem;
+  background: #fff;
+  margin-bottom: 2rem;
+}
+
+.task-input input {
+  width: 100%;
+  padding: 0.3rem;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+
+#bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#add-task input:focus {
+  outline: none;
+}
+
+.task-input small {
+  padding: 0.2rem;
+  display: none;
+}
+
+.task-input.error small {
+  color: red;
+  display: block;
+}
+
+.task-input.error input {
+  border-bottom: 1px solid red;
+}
+
+/* Edit-task box styling */
+
+#edit-task {
+  margin-top: 1rem;
+  box-shadow: 4px 4px 15px 1.5px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  padding: 1.5rem;
+  background: #fff;
+  margin-bottom: 2rem;
+  /* Oletuksena piilossa: */
+  display: none;
+}
+
+#edit-task input {
+  width: 100%;
+  padding: 0.3rem;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+
+#edit-task input:focus {
+  outline: none;
+}
+
+#button,
+#button-edit {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 80px;
+  background: #3ec2cf;
+  color: #f4f4f4;
+  border:none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.15);
+}
+#button-cancel {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 80px;
+  background: #ff0000;
+  color: #f4f4f4;
+  border:none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.15);
+}
+#button:hover,
+#button-edit:hover {
+  cursor: pointer;
+  background: #37aeba;
+}
+#button-cancel:hover {
+  cursor: pointer;
+  background: #e50000;
+}
+
+#tasks {
+  margin-top: 1rem;
+  box-shadow: 4px 4px 15px 1.5px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  padding: 1.5rem;
+  background: #fff;
+  min-height: 300px;
+}
+
+#tasks ul li {
+  display:flex;
+  justify-content: space-between;
+  overflow:hidden;
+}
+
+#tasks button {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  color: #f4f4f4;
+  border:none;
+  border-radius: 5px;
+}
+#delete-task{
+  background: #ff0000;
+  width: 3rem;
+}
+#delete-task:hover {
+  background: #e50000;
+  cursor: pointer;
+}
+#update-task {
+  background: #3ec2cf;
+  width: 3rem;
+}
+#update-task:hover{
+  background: #37aeba;
+  cursor: pointer;
+}
+
+/* Filter-määritykset */
+
+#tasks input {
+  width: 100%;
+  padding: 0.3rem;
+  border: none;
+  border-bottom: 1px solid #999;
+  margin-bottom: 1.5rem;
+}
+
+#tasks input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 560px) {
+  #add-task,
+  #edit-tasks,
+  #tasks {
+    max-width: 400px;
+  }
+  #tasks ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #999;
+  }
+
+  #tasks ul li span {
+    justify-content:center;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  #add-task,
+  #edit-task,
+  #tasks {
+    max-width: 300px;
+  }
+  #weather {
+    display: none;
+  }
+
+}
